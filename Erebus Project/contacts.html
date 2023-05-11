@@ -1,0 +1,143 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/contacts.css">
+    <title>Контакты</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header__logo"><a href="index.html"><img src="images/logo_white.png" alt="Header logo" width="90"
+                        height="62" title="Перейти на главную"></a></div>
+            <div class="header__links">
+                <div class="link"> <a href="catalog.html">Каталог</a></div>
+                <div class="link"> <a href="contacts.html">Контакты</a></div>
+                <div class="link"> <a href="adminPanel.html">Вход</a></div>
+            </div>
+        </div>
+    </header>
+
+
+        <!-- Центральная часть со всем содержимым -->
+
+        <div class="center">
+            <div class="center__heading">
+                <h2>Контактные данные</h2>
+            </div>
+
+            <div class="content__block">
+                <div class="center__texts">
+                    <div class="center__paragraph">
+                        <div>
+                            <img class="icon" src="images/phone.png">
+                            <div class="contacts-info">
+                                Телефон:
+                                <br>88005553535
+                            </div>
+                        </div>
+
+                        <div>
+                            <img class="icon" src="images/mail.png">
+                            <div class="contacts-info">
+                                Адрес электронной почты:
+                                <br>zaplotite@pzh.ru
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <img class="icon" src="images/map.png">
+                            <div class="contacts-info">
+                                Наш адрес:
+                                <br>Санкт-Петербург, ул. Пупкина дом 1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="center__texts">
+                    <div class="center__paragraph">
+                        <div class="contacts__map"> 
+                            <h3 id="map-name">На карте</h3>
+                            <!-- Подключаем карту -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d769.2790838466274!2d30.562820954630688!3d59.7540767295112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x12fbf159c6c61399!2z0J_RgNC-0YXQvtC00L3QsNGPINCY0LbQvtGA0YHQutC-0LPQviDQt9Cw0LLQvtC00LAgItCk0LjQtNC10YDQvdCw0Y8i!5e0!3m2!1sru!2sru!4v1619254031838!5m2!1sru!2sru"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a id="start" href="#form">Оставить данные</a>
+        </div>
+
+        <!-- Всплывающее окно -->
+
+        <div id="form">
+            <div id="window">
+                <div id="form-heading">
+                    <h3 id="form-name">Заполните форму</h3>
+                    <a class="close" href="#">
+                        <img id="close-img" src="images/close.png" title="Закрыть">
+                    </a>
+                </div>
+
+                <form class="form-input" action="#" method="post">
+                    <input class="input" type="text" name="name" placeholder="&nbspФИО" required>
+                    <input class="input" type="email" name="email" placeholder="&nbspЭлектронная почта" required>
+                    <input class="input" type="text" id="phone-number" name="phone-number" placeholder="&nbspНомер телефона" required>
+                    
+                    <div class="g-recaptcha" style="margin: 10px" data-sitekey="6Ld3ZdwjAAAAAB4oQNGwCgBPzzhy4P1ldMgJSl35"></div>
+                    <div id="answer">
+                        <!-- То, как я реализовал бы отправку с бэка (если не потребуется)
+                        <?php
+                        if (isset($_POST['g-recaptcha-response']) && $_POST['g-recaptcha-response']) {
+                            $secret = '6Ld3ZdwjAAAAAPCnmeRZiQ9rvONsiuxpRb68EPvE';
+                            $ip = $_SERVER['REMOTE_ADDR'];
+                            $response = $_POST['g-recaptcha-response'];
+                            $rsp = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$ip");
+                            $arr = json_decode($rsp, TRUE);
+                            if ($arr['success']) {
+                                $fio = $_POST['fio'];
+                                $email = $_POST['email'];
+                                $message = $_POST['message'];
+                                if (mail("schoolproject4327@gmail.com", "Обратная связь с сайта", "ФИО: " . $fio . ". E-mail: " . $email . "\nСообщение: " . $message, "From: " . $email . "\r\n")) {
+                                    ini_set('display_errors', 'On');
+                                    error_reporting('E_ALL');
+                                    echo "Сообщение успешно отправлено";
+                                } else {
+                                    echo "При отправке сообщения возникли ошибки";
+                                }
+                            }
+                            else {
+                                echo "*Подтвердите, что вы не робот и попробуйте еще раз";
+                            }
+                        }
+                        else {
+                            echo "*Поставьте галочку в поле 'Я не робот' для отправки сообщения";
+                        }
+                        ?>
+                         -->
+                    </div>
+                    <input id="sumbit" type="submit" value="Отправить">
+                </form>
+
+            </div>
+        </div>
+
+    
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer__text">
+                <p>ООО "ПКФ ЭРЕБУС" 2023<br>
+                    © Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

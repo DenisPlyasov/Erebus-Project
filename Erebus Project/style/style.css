@@ -1,5 +1,6 @@
 body{
     margin: 0 auto;
+    font-family: "Microsoft YaHei";
 }
 
 a{
@@ -34,7 +35,7 @@ h3{
 /* Cтили для хеадера */
 
 header{
-    background-color: #292828;
+    background-color: #212020;
 }
 
 .header__logo{
@@ -223,8 +224,9 @@ input{
     /* Эти стили всегда должны быть в самом низу */
 
 .footer{
+    font-family: "Arial";
     width: 100%;
-    background: #292828;
+    background: #1e1d1d;
 }
 
 .footer__text{

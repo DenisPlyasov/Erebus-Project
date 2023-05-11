@@ -1,0 +1,179 @@
+/* Стили для эксклюзивных элементов страницы contacts.php */
+h2 {
+    font-size: 50px;
+}
+h3 {
+    text-align: center;
+}
+.center {
+    background-image: url("../images/background-contacts.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 90%; 
+    width: 100%;
+}
+.center__heading{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.content__block {
+    display: flex;
+}
+.center__paragraph{
+    margin: auto;
+}
+
+/* Информация */
+.contacts-info {
+    flex: auto;
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-top: 25px;
+
+}
+.icon {
+    flex: auto;
+    display: inline-block;
+    vertical-align: baseline;
+    width: 45px;
+    height: 45px;
+}
+
+/* Карта */
+#map-name {
+    width: 400px;
+}
+.contacts__map {
+    max-width: 85%;
+    margin: 0 auto;
+}
+.contacts__map iframe {
+    border: 3px solid #9a928d;
+    border-radius: 10px;
+    min-width: 400px;
+    min-height: 300px; }
+@media (max-width: 475px) {
+.contacts__map {
+    padding: 0 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 auto; }
+    .contacts__map iframe {
+        min-width: 400px;
+        min-height: 300px; }
+}
+
+/* Всплывающее окно */
+#start {
+    font-size: 25px;
+    border: 1px solid #9a928d;
+    border-radius: 5px;
+    background-color: #9a928d;
+    margin: auto;
+    display: table;
+    text-decoration: none;
+    padding: 5px;
+}
+#start:hover {
+    border: 1px solid #6c6967;
+    background-color: #6c6967;
+    color: #cdcdcd;
+}
+#form {
+    background: #66666680;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#form:target {
+    display: block;
+}
+#window {
+    width: 600px;
+    height: 300px;
+    box-shadow: 8px 8px 5px 2px #00000070;
+    text-align: center;
+    padding: 5px;
+    border: 3px solid #9a928d;
+    border-radius: 10px;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #292828;
+}
+#close-img {
+    height: 25px;
+    width: 25px;
+}
+.close {
+    border: 3px solid #292828;
+    border-radius: 10px;
+    background: #2e2e2e;
+    display: inline-block;
+    cursor: pointer;
+    margin: 5px 5px;
+    padding: 4px;
+    position: absolute;
+    right: 0;
+
+}
+.close:hover {
+    background: #5f5f5f;
+
+}
+
+/* Содержимое всплывающего окна*/
+#form-heading {
+    display: flex;
+    flex: auto;
+}
+#form-name {
+    margin: auto;
+    font-size: 30px;
+}
+
+.form-input {
+    color: #ffffff;
+}
+.input {
+    border: 3px solid #9a928d;
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px;
+    margin-top: 7px;
+    width: 90%;
+    height: 15%;
+}
+
+#sumbit {
+    font-size: 25px;
+    border: 1px solid #9a928d;
+    background-color: #9a928d;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 5px;
+    color: white;
+}
+#sumbit:hover {
+    border: 1px solid #6c6967;
+    background-color: #6c6967;
+    color: #cdcdcd;
+}
+
+/* Ответ сервера на отправку (сначало сделайте) */
+#answer {
+    text-align: center;
+}
